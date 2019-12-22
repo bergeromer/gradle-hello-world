@@ -13,7 +13,7 @@ node ('slave1') {
     echo ('Error')
   }
   stage ('post') {
-    echo "CurrentBuildResult = " + currentBuild.result
+    echo "CurrentBuildResult = " + currentBuild
     if (currentBuild.result == 'SUCCESS') {
       addBadge(icon: 'green.gif', text:'Build Succeeded')
     }
